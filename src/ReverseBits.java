@@ -7,7 +7,7 @@ public class ReverseBits {
         for (int i = 0; i < 32; i++){
             reverse <<= 1;
             reverse += (n & 1);
-            n >>= 1;
+            n >>>= 1;       // unsigned right shift
         }
         return reverse;
     }       // T: O(n) S: O(1)
